@@ -1,6 +1,5 @@
 import { ADD_MOVIE, DELETE_MOVIE } from '../actions/movieActions.js';
 import movies from './../data.js';
-import { connect } from 'react-redux';
 
 const initialState = {
     movies: movies,
@@ -18,12 +17,5 @@ const reducer = (state = initialState, action) => {
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        movies: state.movies,
-        appTitle: state.appTitle
-    }
-}
-
 // Use connect function and map state to props + pass in actions
-export default connect(mapStateToProps, {}) (reducer);
+export default reducer;

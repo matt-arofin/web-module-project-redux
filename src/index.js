@@ -10,7 +10,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import './index.css';
 
 const store = createStore(reducer);
-console.log('reducer function + redux store:', reducer, state)
+console.log('reducer function + redux store:', store.getState())
 
 ReactDOM.render(
   <Router>
